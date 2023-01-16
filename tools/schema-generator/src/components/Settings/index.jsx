@@ -9,6 +9,7 @@ import ItemSettings from './ItemSettings';
 
 const { TabPane } = Tabs;
 
+/** 右侧边栏 */
 export default function Settings({ widgets }) {
   const { t } = useTranslation();
   const [state, setState] = useSet({

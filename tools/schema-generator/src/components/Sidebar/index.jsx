@@ -5,6 +5,7 @@ import { useStore } from '../../utils/hooks';
 import Element from './Element';
 import './index.less';
 
+/** 左侧边栏 */
 const Sidebar = props => {
   const { t } = useTranslation();
   const { userProps = {} } = useStore();

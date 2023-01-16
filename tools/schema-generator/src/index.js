@@ -7,6 +7,7 @@ import Provider from './Provider';
 import './i18next';
 import './styles/index.less';
 
+/** 表单设计器 */
 const Generator = forwardRef(
   (
     { fixedName, settingsWidgets, onCanvasSelect, locale = 'cn', ...props },

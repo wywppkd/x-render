@@ -31,9 +31,11 @@ const PreviewFR = ({ schema, data }) => {
   );
 };
 
+/** 画布区域(不包括顶部菜单) */
 const FR = ({ id = '#', preview, displaySchema }) => {
   const { flatten, frProps = {} } = useStore();
   const { t } = useTranslation();
+  // 预览模式
   if (preview) {
     const data = flattenToData(flatten);
     return <PreviewFR schema={displaySchema} data={data} />;
@@ -143,6 +145,7 @@ const FR = ({ id = '#', preview, displaySchema }) => {
     ) : null;
 
   const isEmpty = Object.keys(flatten).length < 2; // 只有一个根元素 # 的情况
+  // 画布内容为空
   if (isEmpty) {
     return (
       <Wrapper style={columnStyle} $id={id} item={item}>
@@ -155,6 +158,7 @@ const FR = ({ id = '#', preview, displaySchema }) => {
     );
   }
 
+  // 编辑模式
   return (
     <Wrapper style={columnStyle} $id={id} item={item}>
       <div className={containerClass}>

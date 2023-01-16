@@ -13,6 +13,7 @@ import FR from './core';
 
 const { TextArea } = Input;
 
+/** 画布(设计器中间区域, 包括顶部菜单) */
 const Canvas = ({ onSelect }) => {
   const { t } = useTranslation();
   const setGlobal = useGlobal();
